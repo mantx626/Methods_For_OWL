@@ -1,0 +1,78 @@
+package ExtactionMethod;
+
+import org.junit.Test;
+import org.semanticweb.owlapi.apibinding.OWLManager;
+import org.semanticweb.owlapi.formats.OWLXMLDocumentFormat;
+import org.semanticweb.owlapi.model.*;
+import org.semanticweb.owlapi.reasoner.BufferingMode;
+import org.semanticweb.owlapi.reasoner.NodeSet;
+import org.semanticweb.owlapi.reasoner.OWLReasoner;
+import org.semanticweb.owlapi.reasoner.SimpleConfiguration;
+import org.semanticweb.owlapi.reasoner.structural.StructuralReasoner;
+import uk.ac.manchester.cs.owlapi.modularity.ModuleType;
+import uk.ac.manchester.cs.owlapi.modularity.SyntacticLocalityModuleExtractor;
+
+import java.io.File;
+import java.util.HashSet;
+import java.util.Set;
+
+
+public class ExtractionMethod{
+    public static void main(String[] args) throws Exception {
+        // Create our manager
+        OWLOntologyManager man = OWLManager.createOWLOntologyManager();
+        OWLDataFactory dataFactory = OWLManager.getOWLDataFactory();
+        File ExtraExample = new File("resources\\CoreDMOntology.owl");
+        OWLOntology Extra = man.loadOntologyFromOntologyDocument(ExtraExample);
+//        System.out.println("Loaded ontology: " + Extra.getOntologyID());
+        IRI location = man.getOntologyDocumentIRI(Extra);
+
+        // We want to extract a module for all ClassificationModelingTask. We therefore have to
+        // generate a seed signature that contains "ClassificationModelingTask" and its
+        // subclasses. We start by creating a signature that consists of
+        // "ClassificationModelingTask".
+        OWLClass StartNode = dataFactory.getOWLClass(IRI.create(Extra.getOntologyID().getOntologyIRI().get() + "#ClassificationModelingTask"));
+//        OWLObjectProperty isOutputOf = dataFactory.getOWLObjectProperty(IRI.create(Extra.getOntologyID().getOntologyIRI().get() + "#isOutputOf"));
+//        OWLObjectProperty hasQuality = dataFactory.getOWLObjectProperty(IRI.create(Extra.getOntologyID().getOntologyIRI().get() + "#hasQuality"));
+        Set<OWLEntity> sig = new HashSet<OWLEntity>();
+        sig.add(StartNode);
+//           sig.add(isOutputOf);
+//           sig.add(hasQuality);
+        // We now add all subclasses (direct and indirect) of the chosen
+        // classes. Ideally, it should be done using a DL reasoner, in order to
+        // take inferred subclass relations into account. We are using the
+        // structural reasoner of the OWL API for simplicity.
+        Set<OWLEntity> seedSig = new HashSet<OWLEntity>();
+        OWLReasoner reasoner = new StructuralReasoner(Extra, new SimpleConfiguration(), BufferingMode.NON_BUFFERING);
+        for (OWLEntity ent : sig) {
+            seedSig.add(ent);
+            if (OWLClass.class.isAssignableFrom(ent.getClass())) {
+                NodeSet<OWLClass> subClasses = reasoner.getSubClasses((OWLClass) ent, false);
+                seedSig.addAll(subClasses.getFlattened());
+            }
+        }
+        // We now extract a locality-based module. For most reuse purposes, the
+        // module type should be STAR -- this yields the smallest possible
+        // locality-based module. These modules guarantee that all entailments
+        // of the original ontology that can be formulated using only terms from
+        // the seed signature or the module will also be entailments of the
+        // module. In easier words, the module preserves all knowledge of the
+        // ontology about the terms in the seed signature or the module.
+        SyntacticLocalityModuleExtractor sme = new SyntacticLocalityModuleExtractor(man, Extra, ModuleType.BOT);
+        IRI moduleIRI = IRI.create("http://www.semanticweb.org/ExtraMod_BOT.owl");
+        OWLOntology mod = sme.extractAsOntology(seedSig, moduleIRI);
+
+        // The module can now be saved as usual
+//        OWLDocumentFormat format = man.getOntologyFormat(mod);
+//        System.out.println(format);
+//           OWLXMLDocumentFormat owlxmlFormat = new OWLXMLDocumentFormat();
+//           man.saveOntology(mod, owlxmlFormat, moduleIRI);
+
+        String separator= File.separator;
+        String filename="ExtraMod_BOT.owl";
+        String directory="resources\\results";
+        File file=new File(directory,filename);
+        man.saveOntology(mod, IRI.create(file.toURI()));
+
+    }
+}

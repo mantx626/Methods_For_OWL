@@ -1,0 +1,4328 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/ExtractionExample#"
+     xml:base="http://www.semanticweb.org/ExtractionExample"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ExtraExample.owl">
+        <owl:versionIRI rdf:resource="http://www.semanticweb.org/ExtraExample.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#availableFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ExtraExample.owl#availableFor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#hasCharacteristics -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ExtraExample.owl#hasCharacteristics"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#hasOutput -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ExtraExample.owl#hasOutput">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#isOutputOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#hasProcess -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ExtraExample.owl#hasProcess">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#hasQuality -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ExtraExample.owl#hasQuality">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#isOutputOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ExtraExample.owl#isOutputOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#suitableFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ExtraExample.owl#suitableFor">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#availableFor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#Accuracy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#Accuracy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#PerformanceGoal"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ReportingGoals"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#Algorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#Algorithm">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ExtraExample.owl#hasCharacteristics"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ExtraExample.owl#AlgorithmCharacteristic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#AlgorithmCharacteristic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#AlgorithmCharacteristic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Characteristics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#AlgorithmParameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#AlgorithmParameter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#AlgorithmSelectionBasis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#AlgorithmSelectionBasis"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ApplyModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ApplyModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DeploymentGoals"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#AssociationDiscoveryAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#AssociationDiscoveryAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#PatternDiscoveryAlgorithm"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ExtraExample.owl#SubgroupDiscoveryAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#AssociationDiscoveryTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#AssociationDiscoveryTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#PatternDiscoveryTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#AssociationPatternSet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#AssociationPatternSet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DM-PatternSet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#AssociationRuleGenerationAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#AssociationRuleGenerationAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#PatternProcessingAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#AttributeConstruction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#AttributeConstruction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DataTableProcessing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#AttributeManipulation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#AttributeManipulation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DataTableProcessing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#AttributeReduction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#AttributeReduction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DataTableProcessing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#AverageLinkModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#AverageLinkModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#HierarchicalClusteringModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#Avoid_overfitting -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#Avoid_overfitting">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#PerformanceGoal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#BaselineClassifier -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#BaselineClassifier">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ClassificationModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#BaselineRegressor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#BaselineRegressor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#RegressionModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#BayesNetAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#BayesNetAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#BayesianAlgorithm"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ExtraExample.owl#NaiveBayesAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#BayesNetModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#BayesNetModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#BayesianModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#BayesianAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#BayesianAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ClassificationModelingAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#BayesianModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#BayesianModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#GenerativeModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#BayesianNetwork -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#BayesianNetwork">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#GraphicalModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#BiasVarianceProfile -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#BiasVarianceProfile">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#AlgorithmCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#BinaryClassificationModelingTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#BinaryClassificationModelingTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ClassificationModelingTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#Binomial-N -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#Binomial-N">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DistributionParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#Binomial-P -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#Binomial-P">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DistributionParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#Bottom-UpClusteringAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#Bottom-UpClusteringAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ClusteringModelingAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#C4.5CrispTreeModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#C4.5CrispTreeModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DiscriminantFunctionModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#C4.5ProbTreeModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#C4.5ProbTreeModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DiscriminativeModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#C4.5RuleModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#C4.5RuleModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DiscriminantFunctionModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#CARTClassificationModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#CARTClassificationModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DiscriminantFunctionModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#CHAIDModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#CHAIDModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DiscriminantFunctionModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#CN2Model -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#CN2Model">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DiscriminantFunctionModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#CSVC-Algorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#CSVC-Algorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#SVC-Algorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#CapacityParameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#CapacityParameter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#SVC-Parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#CardinalityReductionTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#CardinalityReductionTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DataReductionTask"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DimensionalityReductionTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#Characteristics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#Characteristics"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ChiSquared-Nu -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ChiSquared-Nu">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DistributionParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ClassBalancingTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ClassBalancingTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DataTransformationTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ClassBasedModelParameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ClassBasedModelParameter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ModelParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ClassCondMeanMatrix -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ClassCondMeanMatrix">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Feature-BasedModelParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ClassCondProbMatrix -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ClassCondProbMatrix">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Feature-BasedModelParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ClassCondVarianceMatrix -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ClassCondVarianceMatrix">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Feature-BasedModelParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ClassPriorVector -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ClassPriorVector">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ClassBasedModelParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ClassificationAlgorithmCharacteristic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ClassificationAlgorithmCharacteristic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#AlgorithmCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ClassificationLearner -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ClassificationLearner">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#SupervisedLearner"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ClassificationModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ClassificationModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#PredictiveModel"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ExtraExample.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ExtraExample.owl#BayesNetAlgorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ExtraExample.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ExtraExample.owl#BayesianAlgorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ExtraExample.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ExtraExample.owl#CSVC-Algorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ExtraExample.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ClassificationModelingAlgorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ExtraExample.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ClassificationRuleInductionAlgorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ExtraExample.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ClassificationTreeInductionAlgorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ExtraExample.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DiscriminantAnalysisAlgorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ExtraExample.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DiscriminantFunctionAlgorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ExtraExample.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DiscriminativeAlgorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ExtraExample.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ExtraExample.owl#GenerativeAlgorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ExtraExample.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ExtraExample.owl#HardMarginSVC-Algorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ExtraExample.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ExtraExample.owl#MultivariateTreeInductionAlgorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ExtraExample.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ExtraExample.owl#NaiveBayesAlgorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ExtraExample.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ExtraExample.owl#NuSVC-Algorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ExtraExample.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ExtraExample.owl#OneClassSVC-Algorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ExtraExample.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ExtraExample.owl#PatternSetBasedClassifModelingAlgorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ExtraExample.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ExtraExample.owl#RuleEnsembleInductionAlgorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ExtraExample.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ExtraExample.owl#SVC-Algorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ExtraExample.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ExtraExample.owl#SetCoveringAlgorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ExtraExample.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ExtraExample.owl#TreeBasedRuleInductionAlgorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ExtraExample.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ExtraExample.owl#UnivariateTreeInductionAlgorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ClassificationModelEvalFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ClassificationModelEvalFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#PredictiveModelEvalFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ClassificationModelingAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ClassificationModelingAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ModelingAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ClassificationModelingTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ClassificationModelingTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#PredictiveModelingTask"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ExtraExample.owl#availableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ClassificationModel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ClassificationProblemType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ClassificationProblemType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#AlgorithmCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ClassificationRuleInductionAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ClassificationRuleInductionAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ClassificationModelingAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ClassificationRuleInductionAlgorithmCharacteristic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ClassificationRuleInductionAlgorithmCharacteristic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#AlgorithmCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ClassificationTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ClassificationTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#PredictionTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ClassificationTreeInductionAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ClassificationTreeInductionAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ClassificationModelingAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ClassificationTreeInductionAlgorithmCharacteristic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ClassificationTreeInductionAlgorithmCharacteristic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#AlgorithmCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ClusteringAlgorithmCharacteristic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ClusteringAlgorithmCharacteristic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#AlgorithmCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ClusteringBasedModelParameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ClusteringBasedModelParameter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ModelParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ClusteringModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ClusteringModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DescriptiveModel"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ExtraExample.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ClusteringModelingAlgorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ClusteringModelEvalFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ClusteringModelEvalFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DescriptiveModelEvalFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ClusteringModelingAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ClusteringModelingAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ModelingAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ClusteringModelingTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ClusteringModelingTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DescriptiveModelingTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ClusteringProblemType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ClusteringProblemType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#AlgorithmCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ClusteringTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ClusteringTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DescriptionTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#CombinationFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#CombinationFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#MathematicalFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ComplementClassCondProbMatrix -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ComplementClassCondProbMatrix">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Feature-BasedModelParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ComplementNaiveBayesModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ComplementNaiveBayesModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#NaiveBayesModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#CompleteLinkModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#CompleteLinkModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#HierarchicalClusteringModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ComputationalComplexityFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ComputationalComplexityFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#MathematicalFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ComputationalComplexityMeasure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ComputationalComplexityMeasure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#Constraint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#Constraint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Mathematics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#CoordinateSystem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#CoordinateSystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#AlgorithmCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#CoreDM-Task -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#CoreDM-Task">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DM-Task"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ExtraExample.owl#UtilityTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#CrossEvaluation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#CrossEvaluation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#EvaluationGoals"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#CrossValidation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#CrossValidation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#MethodEvaluation"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ModelEvaluationAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#DM-Hypothesis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#DM-Hypothesis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Process"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#DM-Model -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#DM-Model">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DM-Hypothesis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#DM-PatternSet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#DM-PatternSet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DM-Hypothesis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#DM-Task -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#DM-Task">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#TaskRequirement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#DataAbstractionAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#DataAbstractionAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DataProcessingAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#DataAbstractionTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#DataAbstractionTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DataProcessingTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#DataCharacteristic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#DataCharacteristic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Characteristics"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DataDescription"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#DataCleaningTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#DataCleaningTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DataProcessingTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#DataDescription -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#DataDescription">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#AlgorithmSelectionBasis"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ExtraExample.owl#TaskRequirement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#DataProcessingAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#DataProcessingAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Algorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#DataProcessingAlgorithmCharacteristic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#DataProcessingAlgorithmCharacteristic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#AlgorithmCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#DataProcessingTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#DataProcessingTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#CoreDM-Task"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#DataReader -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#DataReader">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Reader"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#DataReductionTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#DataReductionTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DataProcessingTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#DataRetrievalTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#DataRetrievalTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#UtilityTask"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ExploratoryDataAnalysisTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#DataTableProcessing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#DataTableProcessing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Operator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#DataTableReader -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#DataTableReader">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DataReader"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#DataTransformationTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#DataTransformationTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DataProcessingTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#DataUnderstanding -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#DataUnderstanding">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Operator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#DataWriter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#DataWriter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Writer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#Data_defect -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#Data_defect">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DataCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#DeafaultReader -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#DeafaultReader">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DataTableReader"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#DealWellWithBinaryClassificationModeling -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#DealWellWithBinaryClassificationModeling">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#AlgorithmCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ExtraExample.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ExtraExample.owl#BinaryClassificationModelingTask"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#DealWellWithContinuousAttributes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#DealWellWithContinuousAttributes">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#AlgorithmCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#DealWellWithMultiClassificationModeling -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#DealWellWithMultiClassificationModeling">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#AlgorithmCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ExtraExample.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ExtraExample.owl#MultiClassificationModelingTask"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#DealWellWithOneClassificationModeling -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#DealWellWithOneClassificationModeling">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#AlgorithmCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ExtraExample.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ExtraExample.owl#OneClassificationModelingTask"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#DecisionTreeModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#DecisionTreeModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#LogicalModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#DefineAttribute -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#DefineAttribute">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#PreprocessingGoals"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ExtraExample.owl#TargetFormat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#DependencyModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#DependencyModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DescriptiveModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#DependencyModelingAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#DependencyModelingAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ModelingAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#DependencyModelingTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#DependencyModelingTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DescriptiveModelingTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#DeploymentGoals -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#DeploymentGoals">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#OptionalSubGoal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#DescriptionTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#DescriptionTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ModelApplicationTask"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ExtraExample.owl#PredictionTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#DescriptiveModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#DescriptiveModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DM-Model"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ExtraExample.owl#PredictiveModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#DescriptiveModelEvalFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#DescriptiveModelEvalFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ModelEvaluationFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#DescriptiveModelingAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#DescriptiveModelingAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ModelingAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#DescriptiveModelingTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#DescriptiveModelingTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ModelingTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#DescriptiveModelling -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#DescriptiveModelling">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#InductionTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#DeviationDescription -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#DeviationDescription">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DM-PatternSet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#DeviationDetectionTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#DeviationDetectionTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#PatternDiscoveryTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#DimensionalityReductionTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#DimensionalityReductionTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DataReductionTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#Discretization -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#Discretization">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#AttributeManipulation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#DiscriminantAnalysisAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#DiscriminantAnalysisAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ClassificationModelingAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#DiscriminantFunctionAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#DiscriminantFunctionAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ClassificationModelingAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#DiscriminantFunctionModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#DiscriminantFunctionModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ClassificationModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#DiscriminantModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#DiscriminantModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#GenerativeModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#DiscriminativeAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#DiscriminativeAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ClassificationModelingAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#DiscriminativeModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#DiscriminativeModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ClassificationModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#DissociationDiscoveryTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#DissociationDiscoveryTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#PatternDiscoveryTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#DissociationPatternSet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#DissociationPatternSet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DM-PatternSet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#DistanceCharacterizationBetweenClusters -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#DistanceCharacterizationBetweenClusters">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#AlgorithmCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#DistanceFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#DistanceFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DistanceOrSimilarityFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#DistanceMeasure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#DistanceMeasure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#DistanceOrSimilarityFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#DistanceOrSimilarityFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DistanceMeasure"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#MathematicalFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#DistributionParameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#DistributionParameter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#EmbeddedFSAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#EmbeddedFSAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#FeatureSelectionAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#EntropyBasedFSAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#EntropyBasedFSAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#FeatureSelectionAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#EntropyBasedFWAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#EntropyBasedFWAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#UnivariateFWAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#EvaluationFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#EvaluationFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#MathematicalFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#EvaluationGoals -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#EvaluationGoals">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#OptionalSubGoal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#Explanation_ability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#Explanation_ability">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#PerformanceGoal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ExploratoryDataAnalysisTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ExploratoryDataAnalysisTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#UtilityTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#Exponential-lambda -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#Exponential-lambda">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DistributionParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ExternalValidityModelFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ExternalValidityModelFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ClusteringModelEvalFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#Feature-BasedModelParameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#Feature-BasedModelParameter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ModelParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#FeatureDiscretizationAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#FeatureDiscretizationAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DataProcessingAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#FeatureDiscretizationTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#FeatureDiscretizationTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DataTransformationTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#FeatureEvaluationContext -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#FeatureEvaluationContext">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#AlgorithmCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#FeatureEvaluationFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#FeatureEvaluationFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#EvaluationFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#FeatureEvaluationTarget -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#FeatureEvaluationTarget">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#AlgorithmCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#FeatureExtractionAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#FeatureExtractionAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DataProcessingAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#FeatureExtractionAlgorithmCharacteristic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#FeatureExtractionAlgorithmCharacteristic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#AlgorithmCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#FeatureExtractionTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#FeatureExtractionTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DataTransformationTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#FeatureLinearTransformAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#FeatureLinearTransformAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#FeatureTransformationAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#FeatureLogTransformAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#FeatureLogTransformAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#FeatureTransformationAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#FeatureNormalizationAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#FeatureNormalizationAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#FeatureTransformationAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#FeatureRankingAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#FeatureRankingAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DataProcessingAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#FeatureRankingTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#FeatureRankingTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DataTransformationTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#FeatureSelectionAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#FeatureSelectionAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DataProcessingAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#FeatureSelectionTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#FeatureSelectionTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DimensionalityReductionTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#FeatureSetEvaluationFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#FeatureSetEvaluationFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#FeatureEvaluationFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#FeatureSqrtTansformAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#FeatureSqrtTansformAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#FeatureTransformationAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#FeatureSquashToIntervalAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#FeatureSquashToIntervalAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#FeatureTransformationAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#FeatureStandardizationAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#FeatureStandardizationAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#FeatureTransformationAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#FeatureSubsetWeightingAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#FeatureSubsetWeightingAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#FeatureWeightingAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#FeatureTransformationAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#FeatureTransformationAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DataProcessingAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#FeatureTransformationTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#FeatureTransformationTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DataTransformationTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#FeatureWeightingAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#FeatureWeightingAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DataProcessingAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#FeatureWeightingAlgorithmCharacteristic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#FeatureWeightingAlgorithmCharacteristic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#AlgorithmCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#FeatureWeightingTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#FeatureWeightingTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DataTransformationTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#FeedforwardNNAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#FeedforwardNNAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#NeuralNetworkAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#FeedfowardLayeredNNModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#FeedfowardLayeredNNModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#NeuralNetworkModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#FillMissingValues -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#FillMissingValues">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#AttributeManipulation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#FilterFSAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#FilterFSAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#FeatureSelectionAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#FishersLinearDiscriminantModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#FishersLinearDiscriminantModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DiscriminantFunctionModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#FormatData -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#FormatData">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Operator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ForwardWrapperFSAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ForwardWrapperFSAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#WrapperFSAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#FunctionParameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#FunctionParameter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#GAwithFSSEvaluatorFSAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#GAwithFSSEvaluatorFSAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#GeneticFSAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#GAwithWrappedLearnerFSAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#GAwithWrappedLearnerFSAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#GeneticFSAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#Gauss-CovarianceMatrix -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#Gauss-CovarianceMatrix">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DistributionParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#Gauss-MeanVector -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#Gauss-MeanVector">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DistributionParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#GaussianKernelSVCModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#GaussianKernelSVCModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#NonlinearSVCModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#GenerativeAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#GenerativeAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ClassificationModelingAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#GenerativeModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#GenerativeModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ClassificationModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#GeneticFSAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#GeneticFSAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#FeatureSelectionAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#Goal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#Goal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#TaskRequirement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#GraphTheoreticClusteringAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#GraphTheoreticClusteringAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ClusteringModelingAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#GraphicalModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#GraphicalModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ProbabilityEstimationModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#HandlingOfCategoricalFeatures -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#HandlingOfCategoricalFeatures">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#AlgorithmCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#HandlingOfClassificationCosts -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#HandlingOfClassificationCosts">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#AlgorithmCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#HandlingOfContinuousFeatures -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#HandlingOfContinuousFeatures">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#AlgorithmCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#HandlingOfInstanceWeights -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#HandlingOfInstanceWeights">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#AlgorithmCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#HardMarginSVC-Algorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#HardMarginSVC-Algorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#SVC-Algorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#HierarchicalClusteringAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#HierarchicalClusteringAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ClusteringModelingAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#HierarchicalClusteringModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#HierarchicalClusteringModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ClusteringModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#HierarchicalClusteringModelParameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#HierarchicalClusteringModelParameter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ClusteringBasedModelParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#Highly_interdependent_attributes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#Highly_interdependent_attributes">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Data_defect"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#HingeLoss -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#HingeLoss">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ClassificationModelEvalFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#HypothesisApplicationAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#HypothesisApplicationAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Algorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#HypothesisApplicationTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#HypothesisApplicationTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#CoreDM-Task"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#HypothesisEvaluationFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#HypothesisEvaluationFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#EvaluationFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#HypothesisEvaluationMeasure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#HypothesisEvaluationMeasure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#HypothesisEvaluationTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#HypothesisEvaluationTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#CoreDM-Task"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#HypothesisProcessingAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#HypothesisProcessingAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Algorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#HypothesisProcessingTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#HypothesisProcessingTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#CoreDM-Task"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#HypothesisTestBasedFSAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#HypothesisTestBasedFSAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#FeatureSelectionAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ID3Model -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ID3Model">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DiscriminantFunctionModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#IncrementalClusteringAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#IncrementalClusteringAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ClusteringModelingAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#IncrementalReducedErrorPruningAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#IncrementalReducedErrorPruningAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#RulePruningAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#IndependentTestSet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#IndependentTestSet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#EvaluationGoals"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#InductionAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#InductionAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Algorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#InductionAlgorithmCharacteristic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#InductionAlgorithmCharacteristic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#AlgorithmCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#InductionTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#InductionTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#CoreDM-Task"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#MainGoal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#Instance-BasedModelParameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#Instance-BasedModelParameter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ModelParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#InstanceConstruction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#InstanceConstruction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DataTableProcessing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#InstanceManipulation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#InstanceManipulation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DataTableProcessing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#InstanceReduction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#InstanceReduction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DataTableProcessing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#InstanceWeightVector -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#InstanceWeightVector">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Instance-BasedModelParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#InternalValidityModelFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#InternalValidityModelFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ClusteringModelEvalFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#Irrelevant_attributes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#Irrelevant_attributes">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Data_defect"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ItemReassignmentToCluster -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ItemReassignmentToCluster">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#InternalValidityModelFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#K-Means-Parameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#K-Means-Parameter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#AlgorithmParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#K-MeansAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#K-MeansAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#PartitionalClusteringAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#K-MeansModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#K-MeansModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#PartitionalClusteringModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#KNN-Parameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#KNN-Parameter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#AlgorithmParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#KNearestNeighborAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#KNearestNeighborAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ModelingAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#KNearestNeighborModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#KNearestNeighborModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DiscriminativeModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#KernelEuclideanDistance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#KernelEuclideanDistance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DistanceFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#KernelFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#KernelFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#SimilarityFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#KernelTypeParameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#KernelTypeParameter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#SVC-Parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#KernelWeightVector -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#KernelWeightVector">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Feature-BasedModelParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#LeafSizeParameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#LeafSizeParameter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#TreeInductionParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#LearnTestSetSplit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#LearnTestSetSplit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#EvaluationGoals"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#LearnerBasedFWAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#LearnerBasedFWAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#FeatureWeightingAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#LearnerFreeFWAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#LearnerFreeFWAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#FeatureWeightingAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#LearningPolicy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#LearningPolicy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#AlgorithmCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#Lift -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#Lift">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ReportingGoals"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#LinearConstraint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#LinearConstraint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Constraint"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#LinearDiscriminantModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#LinearDiscriminantModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DiscriminantModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#LinearEqualityConstraint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#LinearEqualityConstraint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#LinearConstraint"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#LinearInequalityConstraint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#LinearInequalityConstraint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#LinearConstraint"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#LinearModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#LinearModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DiscriminantFunctionModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#LinearRegressionModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#LinearRegressionModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#RegressionModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#LinearSVCModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#LinearSVCModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#SVCModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#LogLikelihood -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#LogLikelihood">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ClassificationModelEvalFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#LogicalModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#LogicalModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DiscriminantFunctionModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#LogisticRegressionModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#LogisticRegressionModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DiscriminativeModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#MainGoal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#MainGoal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Goal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ManifoldFeatureExtractionAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ManifoldFeatureExtractionAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#UnsupervisedFeatureExtractionAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#MarkovNetwork -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#MarkovNetwork">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#GraphicalModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#MathematicalFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#MathematicalFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Mathematics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#MathematicalModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#MathematicalModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DiscriminantFunctionModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#Mathematics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#Mathematics"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#MeanSquaredError -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#MeanSquaredError">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ReportingGoals"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#MeanValueRegressor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#MeanValueRegressor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#BaselineRegressor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#Measure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#Measure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Process"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Operator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#MeasureCharacteristic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#MeasureCharacteristic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Characteristics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#MedianValueRegressor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#MedianValueRegressor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#BaselineRegressor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#MethodEvaluation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#MethodEvaluation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Operator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#MetricLearningApproach -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#MetricLearningApproach">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#SupervisedFeatureExtractionAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#Minimum-VarianceModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#Minimum-VarianceModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#HierarchicalClusteringModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#MissingValueImputationAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#MissingValueImputationAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DataProcessingAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#MissingValueImputationTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#MissingValueImputationTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DataCleaningTask"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ExtraExample.owl#NoiseReductionTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#Missing_values -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#Missing_values">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Data_defect"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#MixtureModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#MixtureModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ProbabilityEstimationModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ModelAggregationAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ModelAggregationAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ModelProcessingAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ModelAggregationTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ModelAggregationTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ModelProcessingTask"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ModelPruningTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ModelApplication -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ModelApplication">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Operator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ModelApplicationAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ModelApplicationAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#HypothesisApplicationAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ModelApplicationTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ModelApplicationTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#HypothesisApplicationTask"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ExtraExample.owl#PatternSetApplicationTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ModelCombination -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ModelCombination">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ModelProcessing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ModelComplexityFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ModelComplexityFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#MathematicalFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ModelComplexityMeasure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ModelComplexityMeasure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ModelEvaluation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ModelEvaluation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Operator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ModelEvaluationAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ModelEvaluationAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Algorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ModelEvaluationFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ModelEvaluationFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#HypothesisEvaluationFunction"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ExtraExample.owl#PatternEvaluationFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ModelEvaluationMeasure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ModelEvaluationMeasure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#HypothesisEvaluationMeasure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ModelEvaluationTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ModelEvaluationTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#HypothesisEvaluationTask"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ExtraExample.owl#PatternSetEvaluationTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ModelInspection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ModelInspection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ReportingGoals"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ModelParameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ModelParameter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ModelParameterCount -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ModelParameterCount">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ModelComplexityMeasure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ModelParameterMagnitude -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ModelParameterMagnitude">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ModelComplexityMeasure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ModelProcessing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ModelProcessing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Operator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ModelProcessingAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ModelProcessingAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#HypothesisProcessingAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ModelProcessingTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ModelProcessingTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#HypothesisProcessingTask"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ExtraExample.owl#PatternSetProcessingTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ModelPruningAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ModelPruningAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ModelProcessingAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ModelPruningTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ModelPruningTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ModelProcessingTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ModelPrunning -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ModelPrunning">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ModelProcessing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ModelReader -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ModelReader">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Reader"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ModelWriter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ModelWriter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Writer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#Model_parameter_handing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#Model_parameter_handing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#PerformanceGoal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#Modeling -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#Modeling">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Operator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ModelingAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ModelingAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#InductionAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ModelingTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ModelingTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#InductionTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#MultiClassificationModelingTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#MultiClassificationModelingTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ClassificationModelingTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#MultilayerPerceptronAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#MultilayerPerceptronAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#FeedforwardNNAlgorithm"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ExtraExample.owl#RadialBasisFunctionNetworkAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#Multinomial-N -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#Multinomial-N">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DistributionParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#Multinomial-Pvector -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#Multinomial-Pvector">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DistributionParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#MultivariateFSAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#MultivariateFSAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#FeatureSelectionAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#MultivariateFWAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#MultivariateFWAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#FeatureWeightingAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#MultivariateLearnerBasedFWAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#MultivariateLearnerBasedFWAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#FeatureWeightingAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#MultivariateLearnerFreeFWAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#MultivariateLearnerFreeFWAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#FeatureWeightingAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#MultivariateTreeInductionAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#MultivariateTreeInductionAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ClassificationTreeInductionAlgorithm"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ExtraExample.owl#UnivariateTreeInductionAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#NBTreeModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#NBTreeModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DiscriminantFunctionModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#NNParameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#NNParameter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#AlgorithmParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#NaiveBayesAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#NaiveBayesAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#BayesianAlgorithm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ExtraExample.owl#hasQuality"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DealWellWithBinaryClassificationModeling"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ExtraExample.owl#hasQuality"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ToleranceToMissingValues"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ExtraExample.owl#hasQuality"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ToleranceToNoise"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#NaiveBayesDiscreteModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#NaiveBayesDiscreteModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#NaiveBayesModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#NaiveBayesKernelModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#NaiveBayesKernelModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#NaiveBayesModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#NaiveBayesModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#NaiveBayesModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#BayesianModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#NaiveBayesMultinomialModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#NaiveBayesMultinomialModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#NaiveBayesModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#NaiveBayesNormalModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#NaiveBayesNormalModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#NaiveBayesModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#NeuralNetworkAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#NeuralNetworkAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ModelingAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#NeuralNetworkModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#NeuralNetworkModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DiscriminantFunctionModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#NoiseReductionTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#NoiseReductionTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DataCleaningTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#Noisy_values -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#Noisy_values">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Data_defect"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#Non-IncrementalClusteringAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#Non-IncrementalClusteringAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ClusteringModelingAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#NonLinearRegressionModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#NonLinearRegressionModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#RegressionModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#NonParametricModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#NonParametricModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ProbabilityEstimationModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#NonParametricTestBasedFSAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#NonParametricTestBasedFSAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#HypothesisTestBasedFSAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#NonlinearPolynomialKernel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#NonlinearPolynomialKernel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#NonlinearPositiveSemidefiniteKernel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#NonlinearPositiveSemidefiniteKernel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#NonlinearPositiveSemidefiniteKernel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#PositiveSemidefiniteKernel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#NonlinearSVCModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#NonlinearSVCModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#SVCModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#NonpositiveSemidefiniteKernel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#NonpositiveSemidefiniteKernel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#KernelFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#Normalization -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#Normalization">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#AttributeManipulation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#NuSVC-Algorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#NuSVC-Algorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#SVC-Algorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#NumberOfInternalNodes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#NumberOfInternalNodes">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ModelParameterCount"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#NumberOfLeaves -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#NumberOfLeaves">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ModelParameterCount"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#NumberOfProbabilities -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#NumberOfProbabilities">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ModelParameterCount"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#NumberOfRules -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#NumberOfRules">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ModelParameterCount"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#NumberOfSupportVectors -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#NumberOfSupportVectors">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ModelParameterCount"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#NumberOfWeights -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#NumberOfWeights">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ModelParameterCount"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#OneClassSVC-Algorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#OneClassSVC-Algorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#SVC-Algorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#OneClassificationModelingTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#OneClassificationModelingTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ClassificationModelingTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#Operator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#Operator">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Process"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#TaskRequirement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#OperatorParameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#OperatorParameter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#OptionalSubGoal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#OptionalSubGoal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Goal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#OrderDependency -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#OrderDependency">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#AlgorithmCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#PARTModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#PARTModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DiscriminantFunctionModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#PRISMModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#PRISMModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DiscriminantFunctionModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#Parameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#Parameter"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ParametricModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ParametricModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ProbabilityEstimationModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ParametricTestBasedFSAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ParametricTestBasedFSAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#HypothesisTestBasedFSAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#PartitionalClusteringAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#PartitionalClusteringAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ClusteringModelingAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#PartitionalClusteringModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#PartitionalClusteringModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ClusteringModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#PartitionalClusteringModelParameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#PartitionalClusteringModelParameter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ClusteringBasedModelParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#PatternDiscovery -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#PatternDiscovery">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#InductionTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#PatternDiscoveryAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#PatternDiscoveryAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#InductionAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#PatternDiscoveryTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#PatternDiscoveryTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#InductionTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#PatternEvaluationFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#PatternEvaluationFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#HypothesisEvaluationFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#PatternProcessingAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#PatternProcessingAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#HypothesisProcessingAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#PatternPruningAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#PatternPruningAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#PatternProcessingAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#PatternPruningTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#PatternPruningTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#PatternSetProcessingTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#PatternSetApplicationAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#PatternSetApplicationAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#HypothesisApplicationAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#PatternSetApplicationTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#PatternSetApplicationTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#HypothesisApplicationTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#PatternSetBasedClassifModelingAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#PatternSetBasedClassifModelingAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ClassificationModelingAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#PatternSetBasedClassificationModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#PatternSetBasedClassificationModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ClassificationModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#PatternSetEvaluationMeasure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#PatternSetEvaluationMeasure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#HypothesisEvaluationMeasure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#PatternSetEvaluationTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#PatternSetEvaluationTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#HypothesisEvaluationTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#PatternSetProcessingTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#PatternSetProcessingTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#HypothesisProcessingTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#PerceptronModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#PerceptronModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DiscriminantFunctionModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#PerformanceBoundsAnalysis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#PerformanceBoundsAnalysis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ModelEvaluationAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#PerformanceGoal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#PerformanceGoal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Goal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#PolynomialKernelSVCModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#PolynomialKernelSVCModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#NonlinearSVCModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#PositiveSemidefiniteKernel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#PositiveSemidefiniteKernel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#KernelFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#PredictionTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#PredictionTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ModelApplicationTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#PredictiveModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#PredictiveModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DM-Model"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#PredictiveModelEvalFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#PredictiveModelEvalFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ModelEvaluationFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#PredictiveModelingAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#PredictiveModelingAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ModelingAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#PredictiveModelingAlgorithmCharacteristic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#PredictiveModelingAlgorithmCharacteristic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#AlgorithmCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#PredictiveModelingTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#PredictiveModelingTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ModelingTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#PredictiveModelling -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#PredictiveModelling">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#InductionTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#PreprocessingGoals -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#PreprocessingGoals">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#OptionalSubGoal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ProbabilisticClusteringAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ProbabilisticClusteringAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ClusteringModelingAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ProbabilityEstimationAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ProbabilityEstimationAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ModelingAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ProbabilityEstimationModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ProbabilityEstimationModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DescriptiveModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ProbabilityEstimationTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ProbabilityEstimationTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DescriptiveModelingTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#Process -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#Process"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#Profit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#Profit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ReportingGoals"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ProjectiveFeatureExtractionAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ProjectiveFeatureExtractionAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#UnsupervisedFeatureExtractionAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#QuadraticConstraint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#QuadraticConstraint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Constraint"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#QuadraticDiscriminantModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#QuadraticDiscriminantModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DiscriminantModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#QuadraticEqualityConstraint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#QuadraticEqualityConstraint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#QuadraticConstraint"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#QuadraticInequalityConstraint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#QuadraticInequalityConstraint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#QuadraticConstraint"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#RM-OperatorParameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#RM-OperatorParameter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#OperatorParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#RadialBasisFunctionNetworkAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#RadialBasisFunctionNetworkAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#FeedforwardNNAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#RandomComponent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#RandomComponent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#AlgorithmCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#RandomTreeModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#RandomTreeModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DiscriminantFunctionModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#RangeOfNeighborhood -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#RangeOfNeighborhood">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#AlgorithmCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#Reader -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#Reader">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Operator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#RecurrentNNAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#RecurrentNNAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#NeuralNetworkAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#Redundant_attributes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#Redundant_attributes">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Data_defect"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ReformatData -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ReformatData">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Operator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#RegressionLearner -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#RegressionLearner">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#SupervisedLearner"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#RegressionModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#RegressionModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#PredictiveModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#RegressionModelEvalFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#RegressionModelEvalFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#PredictiveModelEvalFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#RegressionModelingAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#RegressionModelingAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ModelingAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#RegressionModelingTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#RegressionModelingTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#PredictiveModelingTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#RegressionTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#RegressionTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#PredictionTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#RegressionTreeInductionAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#RegressionTreeInductionAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#RegressionModelingAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#RegularizationParameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#RegularizationParameter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#RegularizedClassificationModelEvalFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#RegularizedClassificationModelEvalFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ClassificationModelEvalFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#RegularizedDiscriminantModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#RegularizedDiscriminantModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DiscriminantModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#RelativeValidityModelFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#RelativeValidityModelFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ClusteringModelEvalFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ReportingGoals -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ReportingGoals">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#OptionalSubGoal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#RetrievalByContent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#RetrievalByContent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#InductionTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#RipperModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#RipperModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DiscriminantFunctionModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#RuleEnsembleInductionAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#RuleEnsembleInductionAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ClassificationRuleInductionAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#RuleInductionStrategy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#RuleInductionStrategy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#AlgorithmCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#RulePruningAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#RulePruningAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#PatternPruningAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#RuleSetModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#RuleSetModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#LogicalModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#RulesetPruningAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#RulesetPruningAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ModelPruningAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#SVC-Algorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#SVC-Algorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ClassificationModelingAlgorithm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ExtraExample.owl#hasQuality"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ToleranceToCorrelatedFeatures"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#SVC-Parameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#SVC-Parameter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#AlgorithmParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#SVCModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#SVCModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DiscriminantFunctionModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#SampleHandlingForRuleInduction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#SampleHandlingForRuleInduction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#AlgorithmCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#Sampling -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#Sampling">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#InstanceReduction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#SegmentationModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#SegmentationModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DescriptiveModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#SelfConfiguringNNAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#SelfConfiguringNNAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#NeuralNetworkAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#SemiSupervisedInductionAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#SemiSupervisedInductionAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#InductionAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#SetCoveringAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#SetCoveringAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ClassificationRuleInductionAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#SetOfClassCondCovarianceMatrices -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#SetOfClassCondCovarianceMatrices">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Feature-BasedModelParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#SetOfSplitThresholds -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#SetOfSplitThresholds">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Feature-BasedModelParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#SetOfWeightVectors -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#SetOfWeightVectors">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Feature-BasedModelParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#SharedCovarianceMatrix -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#SharedCovarianceMatrix">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Feature-BasedModelParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#SigmoidKernel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#SigmoidKernel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#NonpositiveSemidefiniteKernel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#SimilarityFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#SimilarityFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DistanceOrSimilarityFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#SingleConditionModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#SingleConditionModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DiscriminantFunctionModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#SingleFeatureEvaluationFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#SingleFeatureEvaluationFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#FeatureEvaluationFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#SingleFeatureWeightingAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#SingleFeatureWeightingAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#FeatureWeightingAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#SingleLinkModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#SingleLinkModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#HierarchicalClusteringModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#SlipperModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#SlipperModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DiscriminantFunctionModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#Speed -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#Speed">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#PerformanceGoal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#SplineModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#SplineModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#NonLinearRegressionModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#SplitEvalFunctionParameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#SplitEvalFunctionParameter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#TreeInductionParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#SplitTypeParameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#SplitTypeParameter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#TreeInductionParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#SquaredError -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#SquaredError">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#InternalValidityModelFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#StatisticBasedFWAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#StatisticBasedFWAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#UnivariateFWAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#StructuredKernel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#StructuredKernel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#NonlinearPositiveSemidefiniteKernel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#StructuredKernelSVCModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#StructuredKernelSVCModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#NonlinearSVCModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#StructuredPredictionModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#StructuredPredictionModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#PredictiveModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#StructuredPredictionModelingAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#StructuredPredictionModelingAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ModelingAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#StructuredPredictionModelingTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#StructuredPredictionModelingTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#PredictiveModelingTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#StructuredPredictionTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#StructuredPredictionTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#PredictionTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#SubgroupDescription -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#SubgroupDescription">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DM-PatternSet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#SubgroupDiscoveryAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#SubgroupDiscoveryAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#PatternDiscoveryAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#SubgroupDiscoveryTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#SubgroupDiscoveryTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#PatternDiscoveryTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#SubsamplingTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#SubsamplingTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#CardinalityReductionTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#SumOfSquaredWeights -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#SumOfSquaredWeights">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ModelParameterMagnitude"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#SumOfWeights -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#SumOfWeights">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ModelParameterMagnitude"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#SupervisedDiscretizationAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#SupervisedDiscretizationAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#FeatureDiscretizationAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#SupervisedFeatureExtractionAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#SupervisedFeatureExtractionAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#FeatureExtractionAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#SupervisedInductionAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#SupervisedInductionAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#InductionAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#SupervisedLearner -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#SupervisedLearner">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Modeling"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#TargetFormat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#TargetFormat">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#PreprocessingGoals"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#TaskRequirement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#TaskRequirement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#AlgorithmSelectionBasis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ToleranceToClassImbalance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ToleranceToClassImbalance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#AlgorithmCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ToleranceToCorrelatedFeatures -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ToleranceToCorrelatedFeatures">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#AlgorithmCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ExtraExample.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Highly_interdependent_attributes"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ToleranceToHighDimensionality -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ToleranceToHighDimensionality">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#AlgorithmCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ToleranceToIrrelevantFeatures -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ToleranceToIrrelevantFeatures">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#AlgorithmCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ToleranceToMissingValues -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ToleranceToMissingValues">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#AlgorithmCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ExtraExample.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Missing_values"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ToleranceToNoise -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ToleranceToNoise">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#AlgorithmCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ExtraExample.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Noisy_values"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#ToleranceToWideDataSets -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#ToleranceToWideDataSets">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#AlgorithmCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#Top-DownClusteringAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#Top-DownClusteringAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ClusteringModelingAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#TrainingSet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#TrainingSet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Instance-BasedModelParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#TransformationFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#TransformationFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#AlgorithmCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#TreeBasedRuleInductionAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#TreeBasedRuleInductionAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ClassificationRuleInductionAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#TreeBranchingFactor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#TreeBranchingFactor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#AlgorithmCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#TreeDepth -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#TreeDepth">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ModelParameterCount"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#TreeInductionParameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#TreeInductionParameter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#AlgorithmParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#TreePruningAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#TreePruningAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ModelPruningAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#TreePruningParameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#TreePruningParameter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#TreeInductionParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#Uniform-K -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#Uniform-K">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DistributionParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#UniquenessOfSolution -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#UniquenessOfSolution">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#AlgorithmCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#UnivariateFSAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#UnivariateFSAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#FeatureSelectionAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#UnivariateFWAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#UnivariateFWAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#FeatureWeightingAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#UnivariateLearnerBasedFWAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#UnivariateLearnerBasedFWAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#FeatureWeightingAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#UnivariateLearnerFreeFWAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#UnivariateLearnerFreeFWAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#FeatureWeightingAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#UnivariateTreeInductionAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#UnivariateTreeInductionAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#ClassificationTreeInductionAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#UnsupervisedDiscretizationAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#UnsupervisedDiscretizationAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#FeatureDiscretizationAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#UnsupervisedFeatureExtractionAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#UnsupervisedFeatureExtractionAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#FeatureExtractionAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#UnsupervisedInductionAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#UnsupervisedInductionAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#InductionAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#UtilityTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#UtilityTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DM-Task"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#VotedPerceptronModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#VotedPerceptronModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#DiscriminantFunctionModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#Weka-OperatorParameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#Weka-OperatorParameter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#OperatorParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#WrapperFSAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#WrapperFSAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#FeatureSelectionAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#WrapperFWAlgorithm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#WrapperFWAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#FeatureWeightingAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ExtraExample.owl#Writer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ExtraExample.owl#Writer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ExtraExample.owl#Operator"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#Accuracy"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#Avoid_overfitting"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#Explanation_ability"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#Model_parameter_handing"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#Speed"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#Accuracy"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#Lift"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#MeanSquaredError"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#ModelInspection"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#Profit"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#AssociationDiscoveryTask"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#DeviationDetectionTask"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#DissociationDiscoveryTask"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#SubgroupDiscoveryTask"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#BayesianAlgorithm"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#ClassificationRuleInductionAlgorithm"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#ClassificationTreeInductionAlgorithm"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#DiscriminantAnalysisAlgorithm"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#DiscriminantFunctionAlgorithm"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#DiscriminativeAlgorithm"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#GenerativeAlgorithm"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#PatternSetBasedClassifModelingAlgorithm"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#SVC-Algorithm"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#BinaryClassificationModelingTask"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#MultiClassificationModelingTask"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#OneClassificationModelingTask"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#Bottom-UpClusteringAlgorithm"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#GraphTheoreticClusteringAlgorithm"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#HierarchicalClusteringAlgorithm"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#IncrementalClusteringAlgorithm"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#Non-IncrementalClusteringAlgorithm"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#PartitionalClusteringAlgorithm"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#ProbabilisticClusteringAlgorithm"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#Top-DownClusteringAlgorithm"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#CSVC-Algorithm"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#HardMarginSVC-Algorithm"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#NuSVC-Algorithm"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#OneClassSVC-Algorithm"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#ClassBalancingTask"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#FeatureDiscretizationTask"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#FeatureExtractionTask"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#FeatureRankingTask"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#FeatureTransformationTask"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#FeatureWeightingTask"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#ClassificationModelingTask"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#RegressionModelingTask"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#StructuredPredictionModelingTask"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#ClassificationTask"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#RegressionTask"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#StructuredPredictionTask"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#ClusteringModelingTask"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#DependencyModelingTask"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#ProbabilityEstimationTask"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#CrossEvaluation"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#IndependentTestSet"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#LearnTestSetSplit"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#DataAbstractionTask"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#DataCleaningTask"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#DataReductionTask"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#DataTransformationTask"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#DeploymentGoals"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#EvaluationGoals"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#PreprocessingGoals"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#ReportingGoals"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#RuleEnsembleInductionAlgorithm"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#SetCoveringAlgorithm"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ExtraExample.owl#TreeBasedRuleInductionAlgorithm"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
