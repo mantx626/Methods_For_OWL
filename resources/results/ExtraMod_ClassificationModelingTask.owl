@@ -1,0 +1,1444 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/ExtraMod.owl#"
+     xml:base="http://www.semanticweb.org/ExtraMod.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ExtraMod.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#availableFor -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#availableFor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#has-quality -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#has-quality"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#hasCharacteristics -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#hasCharacteristics"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#hasOutput -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#hasOutput">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#hasQuality -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#hasQuality">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#availableFor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#Algorithm -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#Algorithm">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#hasCharacteristics"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#AlgorithmCharacteristic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#AlgorithmCharacteristic -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#AlgorithmCharacteristic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#Characteristics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#AlgorithmSelectionBasis -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#AlgorithmSelectionBasis"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#BayesNetAlgorithm -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#BayesNetAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#BayesianAlgorithm"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#NaiveBayesAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#BayesianAlgorithm -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#BayesianAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ClassificationModelingAlgorithm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#has-quality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#EagerLearningPolicy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#BiasVarianceProfile -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#BiasVarianceProfile">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#AlgorithmCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#BinaryClassificationModelingTask -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#BinaryClassificationModelingTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ClassificationModelingTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#CSVC-Algorithm -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#CSVC-Algorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SVC-Algorithm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#hasQuality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#HandlesBinaryClassification"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#hasQuality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ToleratesNoise"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#Characteristics -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#Characteristics"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ClassificationModel -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ClassificationModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#PredictiveModel"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#BayesNetAlgorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#BayesianAlgorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#CSVC-Algorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ClassificationModelingAlgorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ClassificationRuleInductionAlgorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ClassificationTreeInductionAlgorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DiscriminantAnalysisAlgorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DiscriminantFunctionAlgorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DiscriminativeAlgorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#GenerativeAlgorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#HardMarginSVC-Algorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MultivariateTreeInductionAlgorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#NaiveBayesAlgorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#NuSVC-Algorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#OneClassSVC-Algorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#PatternSetBasedClassifModelingAlgorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#RuleEnsembleInductionAlgorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SVC-Algorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SetCoveringAlgorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TreeBasedRuleInductionAlgorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#UnivariateTreeInductionAlgorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ClassificationModelingAlgorithm -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ClassificationModelingAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ModelingAlgorithm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#has-quality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#BiasVarianceProfile"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#has-quality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ClassificationProblemType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#has-quality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#HandlingOfClassificationCosts"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#has-quality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ToleranceToClassImbalance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ClassificationModelingTask -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ClassificationModelingTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#PredictiveModelingTask"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#availableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ClassificationModel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ClassificationProblemType -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ClassificationProblemType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#AlgorithmCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ClassificationRuleInductionAlgorithm -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ClassificationRuleInductionAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ClassificationModelingAlgorithm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#has-quality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#EagerLearningPolicy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#has-quality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#HandlesCategoricalFeatures"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#has-quality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#HighVarianceProfile"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#has-quality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#RuleInductionStrategy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#has-quality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SampleHandlingForRuleInduction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#has-quality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ToleratesHighDimensionality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#has-quality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ToleratesIrrelevantFeatures"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ClassificationTreeInductionAlgorithm -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ClassificationTreeInductionAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ClassificationModelingAlgorithm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#has-quality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#EagerLearningPolicy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#has-quality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#HandlesCategoricalFeatures"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#has-quality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ToleratesHighDimensionality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#has-quality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ToleratesIrrelevantFeatures"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#has-quality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TreeBranchingFactor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#CoreDM-Task -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#CoreDM-Task">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DM-Task"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DM-Hypothesis -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DM-Hypothesis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#Process"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DM-Model -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DM-Model">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DM-Hypothesis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DM-Task -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DM-Task">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TaskRequirement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DataCharacteristic -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DataCharacteristic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#Characteristics"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DataDescription"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DataDescription -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DataDescription">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#AlgorithmSelectionBasis"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TaskRequirement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#Data_defect -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#Data_defect">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DataCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DealWellWithBinaryClassificationModeling -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DealWellWithBinaryClassificationModeling">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#AlgorithmCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#BinaryClassificationModelingTask"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DiscriminantAnalysisAlgorithm -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DiscriminantAnalysisAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ClassificationModelingAlgorithm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#has-quality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#EagerLearningPolicy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#has-quality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#HandlesContinuousFeatures"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#has-quality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#HandlesNoCategoricalFeatures"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DiscriminantFunctionAlgorithm -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DiscriminantFunctionAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ClassificationModelingAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DiscriminativeAlgorithm -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DiscriminativeAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ClassificationModelingAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#EagerLearningPolicy -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#EagerLearningPolicy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#LearningPolicy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#GenerativeAlgorithm -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#GenerativeAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ClassificationModelingAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#Goal -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#Goal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TaskRequirement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#HandlesBinaryClassification -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#HandlesBinaryClassification">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ClassificationProblemType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#HandlesCategoricalFeatures -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#HandlesCategoricalFeatures">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#HandlingOfCategoricalFeatures"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#HandlesNoCategoricalFeatures"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#HandlesContinuousFeatures -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#HandlesContinuousFeatures">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#HandlingOfContinuousFeatures"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#HandlesMulticlassClassification -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#HandlesMulticlassClassification">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ClassificationProblemType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#HandlesNoCategoricalFeatures -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#HandlesNoCategoricalFeatures">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#HandlingOfCategoricalFeatures"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#HandlesOneClassClassification -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#HandlesOneClassClassification">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ClassificationProblemType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#HandlingOfCategoricalFeatures -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#HandlingOfCategoricalFeatures">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#AlgorithmCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#HandlingOfClassificationCosts -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#HandlingOfClassificationCosts">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#AlgorithmCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#HandlingOfContinuousFeatures -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#HandlingOfContinuousFeatures">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#AlgorithmCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#HardMarginSVC-Algorithm -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#HardMarginSVC-Algorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SVC-Algorithm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#hasQuality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#HandlesBinaryClassification"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#hasQuality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ToleratesNoNoise"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#HighBiasProfile -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#HighBiasProfile">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#BiasVarianceProfile"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#HighVarianceProfile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#HighVarianceProfile -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#HighVarianceProfile">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#BiasVarianceProfile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#Highly_interdependent_attributes -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#Highly_interdependent_attributes">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#Data_defect"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#InductionAlgorithm -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#InductionAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#Algorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#InductionTask -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#InductionTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#CoreDM-Task"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MainGoal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#LearningPolicy -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#LearningPolicy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#AlgorithmCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MainGoal -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MainGoal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#Goal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#Missing_values -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#Missing_values">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#Data_defect"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ModelingAlgorithm -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ModelingAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#InductionAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ModelingTask -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ModelingTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#InductionTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MultiClassificationModelingTask -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MultiClassificationModelingTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ClassificationModelingTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MultivariateTreeInductionAlgorithm -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MultivariateTreeInductionAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ClassificationTreeInductionAlgorithm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#has-quality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#HandlesMulticlassClassification"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#UnivariateTreeInductionAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#NaiveBayesAlgorithm -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#NaiveBayesAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#BayesianAlgorithm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#hasQuality"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DealWellWithBinaryClassificationModeling"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#hasQuality"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ToleranceToMissingValues"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#hasQuality"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ToleranceToNoise"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#has-quality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#HandlesCategoricalFeatures"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#has-quality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#HandlesMulticlassClassification"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#has-quality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#HighBiasProfile"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#has-quality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#RuleInductionStrategy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#has-quality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SampleHandlingForRuleInduction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#has-quality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ToleratesIrrelevantFeatures"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#has-quality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ToleratesMissingValues"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#Noisy_values -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#Noisy_values">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#Data_defect"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#NuSVC-Algorithm -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#NuSVC-Algorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SVC-Algorithm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#hasQuality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#HandlesBinaryClassification"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#OneClassSVC-Algorithm -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#OneClassSVC-Algorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SVC-Algorithm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#hasQuality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#HandlesOneClassClassification"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#OneClassificationModelingTask -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#OneClassificationModelingTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ClassificationModelingTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#PatternSetBasedClassifModelingAlgorithm -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#PatternSetBasedClassifModelingAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ClassificationModelingAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#PredictiveModel -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#PredictiveModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DM-Model"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#PredictiveModelingTask -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#PredictiveModelingTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ModelingTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#Process -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#Process"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#RuleEnsembleInductionAlgorithm -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#RuleEnsembleInductionAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ClassificationRuleInductionAlgorithm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#has-quality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SampleHandlingThruBoostedWeighting"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#RuleInductionStrategy -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#RuleInductionStrategy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#AlgorithmCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SVC-Algorithm -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SVC-Algorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ClassificationModelingAlgorithm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#hasQuality"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ToleranceToCorrelatedFeatures"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#hasQuality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#EagerLearningPolicy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#hasQuality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#HandlesContinuousFeatures"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#hasQuality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#HandlesNoCategoricalFeatures"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#hasQuality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ToleratesClassImbalance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#hasQuality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ToleratesCorrelatedFeatures"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#hasQuality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ToleratesHighDimensionality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#hasQuality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ToleratesIrrelevantFeatures"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#hasQuality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ToleratesNoMissingValues"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SampleHandlingForRuleInduction -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SampleHandlingForRuleInduction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#AlgorithmCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SampleHandlingThruBoostedWeighting -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SampleHandlingThruBoostedWeighting">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SampleHandlingForRuleInduction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SampleHandlingThruRecursivePartitioning -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SampleHandlingThruRecursivePartitioning">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SampleHandlingForRuleInduction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SampleHandlingThruSetCovering -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SampleHandlingThruSetCovering">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SampleHandlingForRuleInduction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SetCoveringAlgorithm -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SetCoveringAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ClassificationRuleInductionAlgorithm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#has-quality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SampleHandlingThruSetCovering"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TaskRequirement -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TaskRequirement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#AlgorithmSelectionBasis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ToleranceToClassImbalance -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ToleranceToClassImbalance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#AlgorithmCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ToleranceToCorrelatedFeatures -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ToleranceToCorrelatedFeatures">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#AlgorithmCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#Highly_interdependent_attributes"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ToleranceToHighDimensionality -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ToleranceToHighDimensionality">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#AlgorithmCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ToleranceToIrrelevantFeatures -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ToleranceToIrrelevantFeatures">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#AlgorithmCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ToleranceToMissingValues -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ToleranceToMissingValues">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#AlgorithmCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#Missing_values"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ToleranceToNoise -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ToleranceToNoise">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#AlgorithmCharacteristic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#Noisy_values"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ToleratesClassImbalance -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ToleratesClassImbalance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ToleranceToClassImbalance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ToleratesCorrelatedFeatures -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ToleratesCorrelatedFeatures">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ToleranceToCorrelatedFeatures"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ToleratesHighDimensionality -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ToleratesHighDimensionality">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ToleranceToHighDimensionality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ToleratesIrrelevantFeatures -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ToleratesIrrelevantFeatures">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ToleranceToIrrelevantFeatures"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ToleratesMissingValues -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ToleratesMissingValues">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ToleranceToMissingValues"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ToleratesNoMissingValues"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ToleratesNoMissingValues -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ToleratesNoMissingValues">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ToleranceToMissingValues"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ToleratesNoNoise -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ToleratesNoNoise">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ToleranceToNoise"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ToleratesNoise"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ToleratesNoise -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ToleratesNoise">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ToleranceToNoise"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TreeBasedRuleInductionAlgorithm -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TreeBasedRuleInductionAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ClassificationRuleInductionAlgorithm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#has-quality"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SampleHandlingThruRecursivePartitioning"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TreeBranchingFactor -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TreeBranchingFactor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#AlgorithmCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#UnivariateTreeInductionAlgorithm -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#UnivariateTreeInductionAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ClassificationTreeInductionAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#BayesianAlgorithm"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ClassificationRuleInductionAlgorithm"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ClassificationTreeInductionAlgorithm"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DiscriminantAnalysisAlgorithm"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DiscriminantFunctionAlgorithm"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DiscriminativeAlgorithm"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#GenerativeAlgorithm"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#PatternSetBasedClassifModelingAlgorithm"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SVC-Algorithm"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#BinaryClassificationModelingTask"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MultiClassificationModelingTask"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#OneClassificationModelingTask"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#CSVC-Algorithm"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#HardMarginSVC-Algorithm"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#NuSVC-Algorithm"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#OneClassSVC-Algorithm"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#HandlesBinaryClassification"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#HandlesMulticlassClassification"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#HandlesOneClassClassification"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#RuleEnsembleInductionAlgorithm"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SetCoveringAlgorithm"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TreeBasedRuleInductionAlgorithm"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SampleHandlingThruBoostedWeighting"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SampleHandlingThruRecursivePartitioning"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SampleHandlingThruSetCovering"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.0.0.20160228-2008) https://github.com/owlcs/owlapi/ -->
+
+
