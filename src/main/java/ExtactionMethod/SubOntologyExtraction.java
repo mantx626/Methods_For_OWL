@@ -21,11 +21,11 @@ import java.util.Set;
 public class SubOntologyExtraction {
     // Create our manager
     public static OWLOntologyManager man = OWLManager.createOWLOntologyManager();
-    public static ExtractionInit Init(String InitOntologyFile, String ExtractedOntologyName, String ExtractedOntologyDir, String ExtractedOntologIRI) {
+    public static ExtractionInit Init(String InitOntologyFile, String ExtractedOntologIRI) {
         ExtractionInit init = new ExtractionInit();
         init.setInitOntologyFile(InitOntologyFile);
-        init.setExtractedOntologyName(ExtractedOntologyName);
-        init.setExtractedOntologyDir(ExtractedOntologyDir);
+//        init.setExtractedOntologyName(ExtractedOntologyName);
+//        init.setExtractedOntologyDir(ExtractedOntologyDir);
         init.setExtractedOntologyIRI(ExtractedOntologIRI);
         return init;
     }
@@ -71,9 +71,17 @@ public class SubOntologyExtraction {
 
 
     public static void main(String[] args) throws OWLOntologyCreationException, OWLOntologyStorageException {
-        ExtractionInit init = Init("resources\\CoreDMOntology.owl", "ExtraMod.owl","resources\\results", "http://www.semanticweb.org/ExtraMod.owl");
-        OWLOntology ExtractedMod = Extract("ClassificationModelingTask", init.getInitOntologyFile(), init.getExtractedOntologyIRI());
-        SaveExtractedMod(init.getExtractedOntologyName(),init.getExtractedOntologyDir(),ExtractedMod);
+        String InitOntologyFile = "resources\\CoreDMOntology.owl";
+
+        String ExtractedOntologIRI = "http://www.semanticweb.org/ExtraMod.owl";
+        ExtractionInit init = Init(InitOntologyFile, ExtractedOntologIRI);
+
+        String StartNodeName = "ClassificationModelingTask";
+        OWLOntology ExtractedMod = Extract(StartNodeName, init.getInitOntologyFile(), init.getExtractedOntologyIRI());
+
+        String ExtractedOntologyName = "ExtraMod_" + StartNodeName+ ".owl";
+        String ExtractedOntologyDir = "resources\\results";
+        SaveExtractedMod(ExtractedOntologyName,ExtractedOntologyDir,ExtractedMod);
 
     }
 }
