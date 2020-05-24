@@ -18,7 +18,10 @@ import java.util.Set;
 
 
 public class ExtractionMethod{
+
+
     public static void main(String[] args) throws Exception {
+
         // Create our manager
         OWLOntologyManager man = OWLManager.createOWLOntologyManager();
         OWLDataFactory dataFactory = OWLManager.getOWLDataFactory();
@@ -73,6 +76,7 @@ public class ExtractionMethod{
         String directory="resources\\results";
         File file=new File(directory,filename);
         man.saveOntology(mod, IRI.create(file.toURI()));
+        //System.out.println(file);
 
     }
 }
