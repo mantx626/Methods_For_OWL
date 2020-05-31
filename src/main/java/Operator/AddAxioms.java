@@ -104,24 +104,24 @@ public class AddAxioms {
         String InitOntologyFile =
                 "C:\\Users\\MTX\\Documents\\GitHub\\Methods_For_OWL\\resources\\CoreDMOntology.owl";
 
-//        String textFile =
-//                "C:\\Users\\MTX\\Documents\\GitHub\\Methods_For_OWL\\resources\\StringList.txt";
-//        List StrList = ReadTextByLine(textFile);
-//        String subject = "Irrelevant_attributes";
+        String textFile =
+                "C:\\Users\\MTX\\Documents\\GitHub\\Methods_For_OWL\\resources\\StringList.txt";
+        List StrList = ReadTextByLine(textFile);
+        String subject = "ClusteringModel";
 //        String object = "Noisy_values";
-//        String ObjectProperty = "isOutputOf";
-//        //OWLOntology NewOnt = addAxioms1_List(InitOntologyFile, SubStrList, ObjectProperty, object);
+        String ObjectProperty = "isOutputOf";
+//        OWLOntology NewOntList_1 = addAxiomsList_1(InitOntologyFile, StrList, ObjectProperty, object);
 //
-//        String NewOntologyName = "NewOnt" + subject + ObjectProperty + "List.owl";
-//        String NewOntologyDir =  "C:\\Users\\MTX\\Documents\\GitHub\\Methods_For_OWL\\resources\\results";
-//        OWLOntology NewOnt1_List = addAxioms1_List(InitOntologyFile, subject,ObjectProperty,StrList);
-//        SaveMergedOntology(NewOntologyName, NewOntologyDir, NewOnt1_List);
+        String NewOntologyName = "NewOnt" + subject + ObjectProperty + "List.owl";
+        String NewOntologyDir =  "C:\\Users\\MTX\\Documents\\GitHub\\Methods_For_OWL\\resources\\results";
+        OWLOntology NewOnt1_List = addAxioms1_List(InitOntologyFile, subject,ObjectProperty,StrList);
+        SaveMergedOntology(NewOntologyName, NewOntologyDir, NewOnt1_List);
 
         //Add an axiom from the text.file
-        String addAxiomText =
-                "C:\\Users\\MTX\\Documents\\GitHub\\Methods_For_OWL\\resources\\addAxiom.txt";
-        List addAxiomStr = ReadTextByLine(addAxiomText);
-        addAxiom1_1(InitOntologyFile, (String) addAxiomStr.get(0),(String) addAxiomStr.get(1),(String) addAxiomStr.get(2));
+//        String addAxiomText =
+//                "C:\\Users\\MTX\\Documents\\GitHub\\Methods_For_OWL\\resources\\addAxiom.txt";
+//        List addAxiomStr = ReadTextByLine(addAxiomText);
+//        addAxiom1_1(InitOntologyFile, (String) addAxiomStr.get(0),(String) addAxiomStr.get(1),(String) addAxiomStr.get(2));
 
     }
 }
