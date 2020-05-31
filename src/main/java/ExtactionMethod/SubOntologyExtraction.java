@@ -1,8 +1,6 @@
 package ExtactionMethod;
 
-import org.junit.Test;
 import org.semanticweb.owlapi.apibinding.OWLManager;
-import org.semanticweb.owlapi.formats.OWLXMLDocumentFormat;
 import org.semanticweb.owlapi.model.*;
 import org.semanticweb.owlapi.reasoner.BufferingMode;
 import org.semanticweb.owlapi.reasoner.NodeSet;
@@ -12,7 +10,6 @@ import org.semanticweb.owlapi.reasoner.structural.StructuralReasoner;
 import uk.ac.manchester.cs.owlapi.modularity.ModuleType;
 import uk.ac.manchester.cs.owlapi.modularity.SyntacticLocalityModuleExtractor;
 
-import java.awt.color.ICC_Profile;
 import java.io.File;
 import java.util.HashSet;
 import java.util.Set;
@@ -21,6 +18,7 @@ import java.util.Set;
 public class SubOntologyExtraction {
     // Create our manager
     public static OWLOntologyManager man = OWLManager.createOWLOntologyManager();
+    //Init
     public static ExtractionInit Init(String InitOntologyFile, String ExtractedOntologIRI) {
         ExtractionInit init = new ExtractionInit();
         init.setInitOntologyFile(InitOntologyFile);
@@ -29,6 +27,7 @@ public class SubOntologyExtraction {
         init.setExtractedOntologyIRI(ExtractedOntologIRI);
         return init;
     }
+    //Extraction method
     public static OWLOntology Extract (String StartNodeName, String InitOntologyFile, String ExtractedOntologyIRI) throws OWLOntologyCreationException {
 
         OWLDataFactory dataFactory = OWLManager.getOWLDataFactory();
@@ -71,15 +70,16 @@ public class SubOntologyExtraction {
 
 
     public static void main(String[] args) throws OWLOntologyCreationException, OWLOntologyStorageException {
-        String InitOntologyFile = "resources\\CoreDMOntology.owl";
+        String InitOntologyFile = "C:\\Users\\MTX\\Documents\\GitHub\\Methods_For_OWL\\resources\\CoreDMOntology.owl";
+        String StartNodeName = "ClusteringTask";
 
-        String ExtractedOntologIRI = "http://www.semanticweb.org/ExtraMod.owl";
+        String ExtractedOntologIRI = "http://www.semanticweb.org/ExtraModFor"+ StartNodeName+ ".owl";
         ExtractionInit init = Init(InitOntologyFile, ExtractedOntologIRI);
 
-        String StartNodeName = "ClassificationModelingTask";
+
         OWLOntology ExtractedMod = Extract(StartNodeName, init.getInitOntologyFile(), init.getExtractedOntologyIRI());
 
-        String ExtractedOntologyName = "ExtraMod_" + StartNodeName+ ".owl";
+        String ExtractedOntologyName = "ExtraModFor" + StartNodeName+ ".owl";
         String ExtractedOntologyDir = "resources\\results";
         SaveExtractedMod(ExtractedOntologyName,ExtractedOntologyDir,ExtractedMod);
 
