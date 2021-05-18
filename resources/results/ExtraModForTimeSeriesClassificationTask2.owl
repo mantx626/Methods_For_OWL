@@ -1,0 +1,1771 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/ExtraModForTimeSeriesClassificationTask.owl#"
+     xml:base="http://www.semanticweb.org/ExtraModForTimeSeriesClassificationTask.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ExtraModForTimeSeriesClassificationTask.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#availableFor -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#availableFor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#hasCharacteristics -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#hasCharacteristics"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#hasOutput -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#hasOutput">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#hasProcess"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#hasProcess -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#hasProcess">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#availableFor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ACF -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ACF">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSCAlgorithm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DeviceTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#Algorithm -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#Algorithm">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#hasCharacteristics"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#AlgorithmCharacteristic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#AlgorithmCharacteristic -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#AlgorithmCharacteristic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#Characteristics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#BOSS -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#BOSS">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSCAlgorithm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DeviceTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ECGTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#FewClassTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ImageTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#LargeTestTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#LargeTrainTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ManyClassTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MediumTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MediumTestTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MediumTrainTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MotionTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SensorTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ShortTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SimulatedTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SmallTestTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SmallTrainTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SpectroTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#BoP -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#BoP">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSCAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#C4.5 -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#C4.5">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSCAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#CID_DTW -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#CID_DTW">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSCAlgorithm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#LongTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MediumClassTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MediumTestTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SmallTrainTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#COTE -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#COTE">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSCAlgorithm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DeviceTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ECGTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#FewClassTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ImageTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#LargeTestTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#LargeTrainTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#LongTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ManyClassTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MediumClassTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MediumTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MediumTestTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MediumTrainTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MotionTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SensorTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ShortTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SimulatedTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SmallTestTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SmallTrainTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#Characteristics -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#Characteristics"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#CoreDM-Task -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#CoreDM-Task">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DM-Task"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DDTW_R1_1NN -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DDTW_R1_1NN">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSCAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DDTW_Rn_1NN -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DDTW_Rn_1NN">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSCAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DD_DTW -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DD_DTW">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSCAlgorithm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#LongTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ManyClassTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MediumTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MediumTestTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MediumTrainTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DM-Hypothesis -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DM-Hypothesis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#Process"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DM-Model -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DM-Model">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DM-Hypothesis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DM-Task -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DM-Task">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TaskRequirement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DTD_C -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DTD_C">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSCAlgorithm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DeviceTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#LongTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MediumTestTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MediumTrainTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DTW_F -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DTW_F">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSCAlgorithm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#FewClassTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ImageTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#LargeTestTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#LargeTrainTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#LongTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MediumClassTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MediumTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MediumTestTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MediumTrainTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MotionTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SensorTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ShortTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SimulatedTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SmallTestTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SmallTrainTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DTW_R1_1NN -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DTW_R1_1NN">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSCAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DTW_Rn_1NN -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DTW_Rn_1NN">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSCAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DataDescription -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DataDescription">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#INPUT"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DeviceTSDataset -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DeviceTSDataset">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSDatasetByArea"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ECGTSDataset -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ECGTSDataset">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSDatasetByArea"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ERP_1NN -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ERP_1NN">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSCAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#Euclidean_1NN -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#Euclidean_1NN">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSCAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#FewClassTSDataset -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#FewClassTSDataset">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSDatasetByNoOfClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#Goal -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#Goal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TaskRequirement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#INPUT -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#INPUT"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ImageTSDataset -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ImageTSDataset">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSDatasetByArea"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#InductionAlgorithm -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#InductionAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#Algorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#InductionTask -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#InductionTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#CoreDM-Task"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MainGoal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#LCSS_1NN -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#LCSS_1NN">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSCAlgorithm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MediumClassTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MotionTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SimulatedTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#LPS -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#LPS">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSCAlgorithm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DeviceTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#FewClassTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ImageTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#LargeTestTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#LargeTrainTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ManyClassTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MediumTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MediumTestTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MotionTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SensorTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ShortTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SimulatedTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SmallTestTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SmallTrainTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#LargeTestTSDataset -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#LargeTestTSDataset">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSDatasetByTestSize"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#LargeTrainTSDataset -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#LargeTrainTSDataset">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSDatasetByTrainSize"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#Logistic -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#Logistic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSCAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#LongTSDataset -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#LongTSDataset">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSDatasetByLength"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MLP -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MLP">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSCAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MSM_1NN -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MSM_1NN">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSCAlgorithm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DeviceTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ECGTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#FewClassTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ImageTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#LargeTestTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#LongTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ManyClassTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MediumClassTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MediumTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MediumTestTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MediumTrainTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MotionTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SimulatedTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SmallTrainTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MainGoal -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MainGoal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#Goal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ManyClassTSDataset -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ManyClassTSDataset">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSDatasetByNoOfClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MediumClassTSDataset -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MediumClassTSDataset">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSDatasetByNoOfClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MediumTSDataset -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MediumTSDataset">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSDatasetByLength"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MediumTestTSDataset -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MediumTestTSDataset">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSDatasetByTestSize"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MediumTrainTSDataset -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MediumTrainTSDataset">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSDatasetByTrainSize"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ModelingAlgorithm -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ModelingAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#InductionAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ModelingTask -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ModelingTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#InductionTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MotionTSDataset -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MotionTSDataset">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSDatasetByArea"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#PredictiveModel -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#PredictiveModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DM-Model"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#PredictiveModelingTask -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#PredictiveModelingTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ModelingTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#Process -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#Process"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#RandF -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#RandF">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSCAlgorithm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SpectroTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#RotF -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#RotF">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSCAlgorithm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#LargeTrainTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SensorTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ShortTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SpectroTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SAXVSM -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SAXVSM">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSCAlgorithm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SmallTestTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SVML -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SVML">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSCAlgorithm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SpectroTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SVMQ -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SVMQ">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSCAlgorithm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ECGTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SpectroTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SensorTSDataset -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SensorTSDataset">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSDatasetByArea"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ShortTSDataset -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ShortTSDataset">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSDatasetByLength"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SimulatedTSDataset -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SimulatedTSDataset">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSDatasetByArea"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SmallTestTSDataset -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SmallTestTSDataset">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSDatasetByTestSize"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SmallTrainTSDataset -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SmallTrainTSDataset">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSDatasetByTrainSize"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SpectroTSDataset -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SpectroTSDataset">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSDatasetByArea"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSBF -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSBF">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSCAlgorithm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#FewClassTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ImageTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#LargeTestTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#LargeTrainTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ManyClassTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MediumTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MediumTrainTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MotionTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SensorTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SimulatedTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SmallTestTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SmallTrainTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSCAlgorithm -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSCAlgorithm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ModelingAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSDatasetByArea -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSDatasetByArea">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TimeSeriesDataset"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSDatasetByLength -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSDatasetByLength">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TimeSeriesDataset"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSDatasetByNoOfClass -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSDatasetByNoOfClass">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TimeSeriesDataset"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSDatasetByTestSize -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSDatasetByTestSize">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TimeSeriesDataset"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSDatasetByTrainSize -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSDatasetByTrainSize">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TimeSeriesDataset"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSF -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSF">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSCAlgorithm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DeviceTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ECGTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#FewClassTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ImageTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#LargeTestTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#LargeTrainTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#LongTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ManyClassTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MediumTrainTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SensorTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ShortTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SmallTestTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SpectroTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TWE_1NN -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TWE_1NN">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSCAlgorithm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ManyClassTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MediumClassTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TaskRequirement -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TaskRequirement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#INPUT"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TimeSeriesClassificationModel -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TimeSeriesClassificationModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#PredictiveModel"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ACF"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#BOSS"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#BoP"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#C4.5"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#CID_DTW"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#COTE"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DDTW_R1_1NN"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DDTW_Rn_1NN"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DD_DTW"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DTD_C"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DTW_F"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DTW_R1_1NN"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DTW_Rn_1NN"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ERP_1NN"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#Euclidean_1NN"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#LCSS_1NN"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#LPS"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#Logistic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MLP"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MSM_1NN"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#RandF"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#RotF"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SAXVSM"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SVML"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SVMQ"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSBF"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSCAlgorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSF"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TWE_1NN"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#WDDTW_1NN"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#WDTW_1NN"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TimeSeriesClassificationTask -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TimeSeriesClassificationTask">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#PredictiveModelingTask"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#availableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TimeSeriesClassificationModel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TimeSeriesDataset -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TimeSeriesDataset">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DataDescription"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#WDDTW_1NN -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#WDDTW_1NN">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSCAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#WDTW_1NN -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#WDTW_1NN">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TSCAlgorithm"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#suitableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#MediumClassTSDataset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.0.0.20160228-2008) https://github.com/owlcs/owlapi/ -->
+
+

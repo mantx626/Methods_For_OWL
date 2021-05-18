@@ -70,8 +70,8 @@ public class SubOntologyExtraction {
 
 
     public static void main(String[] args) throws OWLOntologyCreationException, OWLOntologyStorageException {
-        String InitOntologyFile = "C:\\Users\\MTX\\Documents\\GitHub\\Methods_For_OWL\\resources\\CoreDMOntology.owl";
-        String StartNodeName = "ClusteringTask";
+        String InitOntologyFile = "resources\\MergedOntology.owl";
+        String StartNodeName = "TimeSeriesClassificationTask";
 
         String ExtractedOntologIRI = "http://www.semanticweb.org/ExtraModFor"+ StartNodeName+ ".owl";
         ExtractionInit init = Init(InitOntologyFile, ExtractedOntologIRI);
@@ -79,7 +79,7 @@ public class SubOntologyExtraction {
 
         OWLOntology ExtractedMod = Extract(StartNodeName, init.getInitOntologyFile(), init.getExtractedOntologyIRI());
 
-        String ExtractedOntologyName = "ExtraModFor" + StartNodeName+ ".owl";
+        String ExtractedOntologyName = "ExtraModFor" + StartNodeName+ "3.owl";
         String ExtractedOntologyDir = "resources\\results";
         SaveExtractedMod(ExtractedOntologyName,ExtractedOntologyDir,ExtractedMod);
 

@@ -162,12 +162,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#AlgorithmSelectionBasis -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#AlgorithmSelectionBasis"/>
-    
-
-
     <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ApplyModel -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ApplyModel">
@@ -1703,7 +1697,7 @@
     <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DataDescription -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DataDescription">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#AlgorithmSelectionBasis"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#INPUT"/>
     </owl:Class>
     
 
@@ -3153,6 +3147,12 @@
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ID3Model">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DiscriminantFunctionModel"/>
     </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#INPUT -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#INPUT"/>
     
 
 
@@ -6497,7 +6497,7 @@
     <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TaskRequirement -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TaskRequirement">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#AlgorithmSelectionBasis"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#INPUT"/>
     </owl:Class>
     
 

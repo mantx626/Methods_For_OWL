@@ -76,7 +76,7 @@ public class OntologiesMerging {
     }
     public static void main(String[] args) throws OWLOntologyCreationException, OWLOntologyStorageException {
         String MergingOntologyDir1 = "resources\\CoreDMOntology.owl";
-        String MergingOntologyDir2 = "resources\\DataCharacteristics.owl";
+        String MergingOntologyDir2 = "resources\\TSC.owl";
         MergingInit Init = Init(MergingOntologyDir1, MergingOntologyDir2);
 
         String MergedOntologyiri = "http://www.semanticweb.org/MergedOntology.owl";

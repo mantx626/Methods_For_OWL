@@ -162,12 +162,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#AlgorithmSelectionBasis -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#AlgorithmSelectionBasis"/>
-    
-
-
     <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ApplyModel -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ApplyModel">
@@ -1175,7 +1169,61 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#Bottom-UpClusteringAlgorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ClusteringModelingAlgorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#GraphTheoreticClusteringAlgorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#HierarchicalClusteringAlgorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#IncrementalClusteringAlgorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#K-MeansAlgorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#Non-IncrementalClusteringAlgorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#PartitionalClusteringAlgorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ProbabilisticClusteringAlgorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#isOutputOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#Top-DownClusteringAlgorithm"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1202,6 +1250,12 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ClusteringModelingTask">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DescriptiveModelingTask"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#availableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ClusteringModel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1218,6 +1272,54 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ClusteringTask">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DescriptionTask"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#availableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#AverageLinkModel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#availableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ClusteringModel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#availableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#CompleteLinkModel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#availableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#HierarchicalClusteringModel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#availableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#K-MeansModel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#availableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#Minimum-VarianceModel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#availableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#PartitionalClusteringModel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#availableFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#SingleLinkModel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1595,7 +1697,7 @@
     <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DataDescription -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DataDescription">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#AlgorithmSelectionBasis"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#INPUT"/>
     </owl:Class>
     
 
@@ -1715,7 +1817,6 @@
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DeafaultReader">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DataTableReader"/>
     </owl:Class>
-
     
 
 
@@ -1724,8 +1825,6 @@
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DealWellWithContinuousAttributes">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#AlgorithmCharacteristic"/>
     </owl:Class>
-
-
     
 
 
@@ -3048,6 +3147,12 @@
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#ID3Model">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#DiscriminantFunctionModel"/>
     </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#INPUT -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#INPUT"/>
     
 
 
@@ -6392,7 +6497,7 @@
     <!-- http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TaskRequirement -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#TaskRequirement">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#AlgorithmSelectionBasis"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/CoreDMOntology.owl#INPUT"/>
     </owl:Class>
     
 
